@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+    <title>CSS Grid</title>
+  
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+    
+        .container {
+            display: grid;
+            grid-template-areas:
+            "header"
+            "content"
+            "sidebar"
+            "footer";
+            grid-template-rows: auto auto 1fr auto;
+            grid-template-columns: 1fr;
+            min-height: 100vh;
+        }
+    
+        @media (min-width: 768px) {
+        .container {
+            grid-template-areas:
+            "header header"
+            "content sidebar"
+            "footer footer";
+            grid-template-columns: 1fr;
+            grid-template-rows: auto 1fr auto auto;
+        }
+        }
+    
+        header {
+            grid-area: header;
+            background-color: black;
+            color: green;
+            padding: 20px;
+            text-align: center;
+        }
+    
+        main {
+            grid-area: content;
+            padding: 20px;
+            background-color: grey;
+            color: lightgreen;
+            text-align: left;
+        }
+    
+        aside {
+            grid-area: sidebar;
+            background-color: lightblue;
+            color: green;
+            padding: 20px;
+            text-align: left;
+        }
+    
+        footer {
+            grid-area: footer;
+            background-color: black;
+            color: green;
+            padding: 20px;
+            text-align: center;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+
+<body>
+<div class="container">
+    <header>
+        <h1>
+            Header Content
+        </h1>
+    </header>
+
+    <main>
+        <h2>
+            Main Content Header
+        </h2>
+        <p>
+            Main Content Paragraph.
+        </p>
+    </main>
+    
+    <aside>
+        <h2>
+            Sidebar Header
+        </h2>
+        <p>
+            Sidebar Paragraph.
+        </p>
+    </aside>
+    
+    <footer>
+        <p>
+            Footer
+        </p>
+    </footer>
+</div>
+
+
+</body>
+</html>

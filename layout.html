@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<title>
+    Layout Design
+</title>
+
+<style>
+    body {
+        margin: auto;
+        padding: auto;
+        font-family: Arial, sans-serif;
+    }
+
+    .container {
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+    }
+    
+    header {
+        background-size: center;
+        color: green;
+        text-align: center;
+        font-weight: bold;
+        padding: 10px;
+    }
+        
+    nav {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: black;
+        color: green;
+        padding: 10px;
+    }
+
+    main {
+        flex-grow: 1;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 10px;
+    }
+
+    footer {
+        background-color: black;
+        color: green;
+        text-align: center;
+        padding: 10px;
+    }
+
+    .content {
+        margin: 25px;
+        text-align: center;
+    }
+
+    @media screen and (max-width: 600px)
+    {
+        nav {
+            flex-direction: column;
+            align-items: center;
+        }
+
+        footer {
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+
+    </style>
+
+
+<div class="container">
+
+    <header style="background-image: url(#)">
+        <h1>Header Text Here</h1>
+    </header>
+    
+
+    <nav>
+        <a href=#>Home</a>
+        <a href=#>Profile</a>
+        <a href=#>About</a>
+    </nav>
+    
+    <main>
+        <div class="content">
+            <h2>Header2 Text Here</h2>
+            <p>Paragraph Text Here.</p>
+        </div>
+        <div class="content">
+            <h2>2nd Header2 Text Here</h2>
+            <p>Paragraph Text Here.</p>
+        </div>
+    </main>
+    
+    <footer>
+        <section style="display: inline;">Contact Us</section>
+        <section style="display: inline">Events</section>
+        <section style="display: inline">Blog</section>
+    </footer>
+    
+</div>
+
+
+</body>
+</html>
